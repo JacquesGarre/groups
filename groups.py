@@ -3,7 +3,7 @@ import numpy as np
 
 class Classe(object):
 
-    PERSONS_COUNT_BY_GROUP = 4
+    MAX_PERSONS_BY_GROUP = 4
 
     def __init__(self, effectif):
         self.effectif = effectif
