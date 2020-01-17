@@ -12,7 +12,10 @@ class Classroom(object):
         self.__groups = self.__createGroups()
 
     def __createGroups(self):
-        groups_count = len(self.liste_apprenants) // self.__max_persons_by_group + 1
+        if len(self.liste_apprenants) % self.__max_persons_by_group == 0:
+            groups_count = len(self.liste_apprenants) / self.__max_persons_by_group
+        else:
+            groups_count = len(self.liste_apprenants) // self.__max_persons_by_group + 1
         random.shuffle(self.liste_apprenants)
         groups = np.array_split(self.liste_apprenants, groups_count)
         return groups
