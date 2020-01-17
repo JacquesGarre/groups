@@ -10,7 +10,7 @@ class Classe(object):
         self.groups = self.createGroups()
 
     def createGroups(self):
-        groups_count = self.effectif // self.PERSONS_COUNT_BY_GROUP + 1
+        groups_count = self.effectif // self.MAX_PERSONS_BY_GROUP + 1
         idsList = [i for i in range(self.effectif+1)]
         random.shuffle(idsList)
         groups = np.array_split(idsList, groups_count)
