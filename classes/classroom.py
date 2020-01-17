@@ -4,7 +4,7 @@ import csv
 from os.path import dirname, abspath, join
 import datetime
 
-class Classe(object):
+class Classroom(object):
 
     def __init__(self, csv, max_persons_by_group):
         self.liste_apprenants = self.__parseCsv(csv)
